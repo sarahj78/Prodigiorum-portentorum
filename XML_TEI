@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"
+            type="application/xml"
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"
+            type="application/xml"
+            schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ouvrage_001" xml:lang="fr">
+
+  <!-- ============================================================ -->
+  <!--  EN-TÊTE TEI (teiHeader)                                     -->
+  <!--  Métadonnées éditoriales, bibliographiques et de codage      -->
+  <!-- ============================================================ -->
+
+  <teiHeader>
+
+    <fileDesc>
+      <!-- Description complète du fichier électronique -->
+
+      <titleStmt>
+        <title type="main">Prodigiorum portentorum</title>
+        <title type="sub">Sous-titre éventuel</title>
+        <author>
+          <persName>
+            <forename>Prénom</forename>
+            <surname>Nom</surname>
+          </persName>
+          <affiliation>Institution ou affiliation de l'auteur</affiliation>
+        </author>
+        <editor role="scientific">
+          <persName>
+            <forename>Sarah</forename>
+            <surname>Jouan</surname>
+              
+          </persName>
+        </editor>
+        <respStmt>
+          <resp>Encodage TEI</resp>
+          <persName>
+            <forename>Prénom</forename>
+            <surname>Nom</surname>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp>Correction et révision</resp>
+          <persName>
+            <forename>Prénom</forename>
+            <surname>Nom</surname>
+          </persName>
+        </respStmt>
+      </titleStmt>
+
+      <editionStmt>
+        <edition n="1">Première édition numérique, <date when="2026">2026</date></edition>
+      </editionStmt>
+
+      <extent>
+        <!-- Indication de l'étendue approximative du document -->
+        <measure unit="pages" quantity="20">20 pages</measure>
+        <measure unit="words" quantity="0">à compléter</measure>
+      </extent>
+
+      <publicationStmt>
+        <publisher>Nom de l'éditeur ou institution</publisher>
+        <pubPlace>Lieu de publication</pubPlace>
+        <date type="publication" when="2026">2026</date>
+        <idno type="ISBN">000-0-0000-0000-0</idno>       <!-- à compléter -->
+        <idno type="DOI">10.0000/xxxxx</idno>             <!-- si disponible -->
+        <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">
+            Licence Creative Commons Attribution – Pas d'utilisation commerciale 4.0 International (CC BY-NC 4.0)
+          </licence>
+        </availability>
+      </publicationStmt>
+
+      <sourceDesc>
+        <!-- Description de la source dont est issu ce fichier TEI -->
+        <biblStruct>
+          <monogr>
+            <author>
+              <persName>
+                <forename>Prénom</forename>
+                <surname>Nom</surname>
+              </persName>
+            </author>
+            <title level="m">Titre principal de l'ouvrage</title>
+            <edition>1ère éd.</edition>
+            <imprint>
+              <publisher>Nom de l'éditeur</publisher>
+              <pubPlace>Lieu de publication</pubPlace>
+              <date when="2026">2026</date>
+              <biblScope unit="pages">20</biblScope>
+            </imprint>
+          </monogr>
+          <idno type="ISBN">000-0-0000-0000-0</idno>
+        </biblStruct>
+      </sourceDesc>
+
+    </fileDesc>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  Profil du texte                                            -->
+    <!-- ---------------------------------------------------------- -->
+    <profileDesc>
+
+      <langUsage>
+        <language ident="fr" usage="100">Français</language>
+      </langUsage>
+
+      <textClass>
+        <keywords scheme="https://rameau.bnf.fr/">
+          <term>Mot-clé 1</term>
+          <term>Mot-clé 2</term>
+          <term>Mot-clé 3</term>
+        </keywords>
+        <classCode scheme="https://www.loc.gov/marc/bibliographic/">XXX.XX</classCode>
+      </textClass>
+
+      <abstract>
+        <p>Résumé de l'ouvrage en quelques phrases. Ce résumé présente le sujet, l'approche
+           méthodologique et les principaux apports du texte.</p>
+      </abstract>
+
+      <creation>
+        <date type="composition" notBefore="2025" notAfter="2026">2025–2026</date>
+      </creation>
+
+    </profileDesc>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  Historique des révisions                                   -->
+    <!-- ---------------------------------------------------------- -->
+    <revisionDesc status="draft">
+      <change when="2026-06-11" who="#encodeur_001" status="draft">
+        Création du fichier TEI et encodage initial du texte source.
+      </change>
+      <!-- Ajouter une entrée <change> à chaque révision significative -->
+    </revisionDesc>
+
+  </teiHeader>
+
+  <!-- ============================================================ -->
+  <!--  TEXTE PRINCIPAL                                             -->
+  <!-- ============================================================ -->
+
+  <text>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  Parties liminaires (avant le corps du texte)              -->
+    <!-- ---------------------------------------------------------- -->
+    <front>
+
+      <!-- Page de titre -->
+      <titlePage>
+        <docTitle>
+          <titlePart type="main">Titre principal de l'ouvrage</titlePart>
+          <titlePart type="sub">Sous-titre éventuel</titlePart>
+        </docTitle>
+        <docAuthor>Prénom Nom de l'auteur</docAuthor>
+        <docEdition>Première édition</docEdition>
+        <docImprint>
+          <publisher>Nom de l'éditeur</publisher>
+          <pubPlace>Lieu de publication</pubPlace>
+          <docDate when="2026">2026</docDate>
+        </docImprint>
+      </titlePage>
+
+      <!-- Dédicace (facultative) -->
+      <div type="dedication">
+        <p>À …</p>
+      </div>
+
+      <!-- Épigraphe (facultative) -->
+      <div type="epigraph">
+        <cit>
+          <quote>Citation liminaire.</quote>
+          <bibl><author>Auteur de la citation</author>, <title level="m">Titre de l'œuvre</title></bibl>
+        </cit>
+      </div>
+
+      <!-- Avant-propos / Préface -->
+      <div type="preface" n="0">
+        <head>Avant-propos</head>
+        <p>Texte de l'avant-propos ou de la préface.</p>
+      </div>
+
+      <!-- Table des matières (sommaire structuré) -->
+      <div type="contents">
+        <head>Table des matières</head>
+        <list type="toc">
+          <item><ref target="#chap1">Chapitre 1 – Titre du chapitre 1</ref></item>
+          <item><ref target="#chap2">Chapitre 2 – Titre du chapitre 2</ref></item>
+          <item><ref target="#chap3">Chapitre 3 – Titre du chapitre 3</ref></item>
+          <item><ref target="#conclusion">Conclusion</ref></item>
+          <item><ref target="#bibliography">Bibliographie</ref></item>
+        </list>
+      </div>
+
+    </front>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  Corps du texte                                             -->
+    <!-- ---------------------------------------------------------- -->
+    <body>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <!--  CHAPITRE 1  (pages 1–7 environ)                        -->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <div type="chapter" n="1" xml:id="chap1">
+        <head>Titre du chapitre 1</head>
+
+        <!-- Intertitres de niveau 1 -->
+        <div type="section" n="1.1" xml:id="sec1_1">
+          <head>1.1 Titre de la section</head>
+          <p>Premier paragraphe de la section. Le texte commence ici. <pb n="1"/>
+             Suite du texte sur la page 1.</p>
+          <p>Deuxième paragraphe. Exemple de note de bas de page :
+             <note place="bottom" n="1">Texte de la note de bas de page numéro 1.</note>
+             Suite du paragraphe après la note.</p>
+          <p>Troisième paragraphe. <pb n="2"/>
+             Le texte continue sur la page 2.</p>
+        </div>
+
+        <div type="section" n="1.2" xml:id="sec1_2">
+          <head>1.2 Titre de la section</head>
+          <p>Texte de la section 1.2. Exemple d'une citation longue (bloc) :</p>
+          <cit>
+            <quote>
+              <p>Texte de la citation longue, généralement indenté dans la mise en page imprimée.
+                 Ce passage est extrait d'une source secondaire.</p>
+            </quote>
+            <bibl><author>Auteur cité</author>, <title level="m">Titre de l'œuvre</title>,
+              <pubPlace>Lieu</pubPlace>, <publisher>Éditeur</publisher>,
+              <date when="2020">2020</date>, p. <biblScope unit="page">45</biblScope>.</bibl>
+          </cit>
+          <p>Reprise du texte après la citation. <pb n="3"/></p>
+        </div>
+
+        <div type="section" n="1.3" xml:id="sec1_3">
+          <head>1.3 Titre de la section</head>
+          <p>Texte de la section 1.3. Exemple de liste numérotée :</p>
+          <list type="ordered" rend="numbered">
+            <item n="1">Premier élément de la liste.</item>
+            <item n="2">Deuxième élément de la liste.</item>
+            <item n="3">Troisième élément de la liste.</item>
+          </list>
+          <p>Texte après la liste. <pb n="4"/></p>
+          <p>Dernier paragraphe du chapitre 1. <pb n="5"/></p>
+        </div>
+
+      </div><!-- fin chap1 -->
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <!--  CHAPITRE 2  (pages 6–12 environ)                       -->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <div type="chapter" n="2" xml:id="chap2">
+        <head>Titre du chapitre 2</head>
+
+        <div type="section" n="2.1" xml:id="sec2_1">
+          <head>2.1 Titre de la section</head>
+          <p>Texte de la section 2.1. <pb n="6"/>
+             Exemple de figure (illustration) :</p>
+          <figure xml:id="fig1">
+            <graphic url="images/figure1.png" width="100%"/>
+            <figDesc>Description textuelle de la figure pour l'accessibilité.</figDesc>
+            <head type="legend">Figure 1 – Légende de la figure.</head>
+          </figure>
+          <p>Texte après la figure.</p>
+        </div>
+
+        <div type="section" n="2.2" xml:id="sec2_2">
+          <head>2.2 Titre de la section</head>
+          <p>Texte de la section 2.2. <pb n="7"/>
+             Exemple de tableau :</p>
+          <table xml:id="tab1" rend="rules">
+            <head>Tableau 1 – Titre du tableau.</head>
+            <row role="label">
+              <cell role="label">Colonne A</cell>
+              <cell role="label">Colonne B</cell>
+              <cell role="label">Colonne C</cell>
+            </row>
+            <row>
+              <cell>Donnée 1A</cell>
+              <cell>Donnée 1B</cell>
+              <cell>Donnée 1C</cell>
+            </row>
+            <row>
+              <cell>Donnée 2A</cell>
+              <cell>Donnée 2B</cell>
+              <cell>Donnée 2C</cell>
+            </row>
+          </table>
+          <p>Texte après le tableau. <pb n="8"/></p>
+        </div>
+
+        <div type="section" n="2.3" xml:id="sec2_3">
+          <head>2.3 Titre de la section</head>
+          <p>Texte de la section 2.3. Exemple d'entités nommées annotées :
+             <persName ref="#auteur_001">Jean Dupont</persName> a publié ses recherches à
+             <placeName ref="https://www.geonames.org/2988507">Paris</placeName> en
+             <date when="1998">1998</date>.
+             Il travaillait pour l'<orgName ref="#org_001">Institut de recherche XYZ</orgName>.
+          </p>
+          <p>Suite du texte. <pb n="9"/></p>
+          <p>Fin de la section 2.3. <pb n="10"/></p>
+        </div>
+
+        <div type="section" n="2.4" xml:id="sec2_4">
+          <head>2.4 Titre de la section</head>
+          <p>Texte de la section 2.4. <pb n="11"/>
+             Dernier paragraphe du chapitre 2. <pb n="12"/></p>
+        </div>
+
+      </div><!-- fin chap2 -->
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <!--  CHAPITRE 3  (pages 13–17 environ)                      -->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <div type="chapter" n="3" xml:id="chap3">
+        <head>Titre du chapitre 3</head>
+
+        <div type="section" n="3.1" xml:id="sec3_1">
+          <head>3.1 Titre de la section</head>
+          <p>Texte de la section 3.1. <pb n="13"/></p>
+        </div>
+
+        <div type="section" n="3.2" xml:id="sec3_2">
+          <head>3.2 Titre de la section</head>
+          <p>Texte de la section 3.2. <pb n="14"/></p>
+        </div>
+
+        <div type="section" n="3.3" xml:id="sec3_3">
+          <head>3.3 Titre de la section</head>
+          <p>Texte de la section 3.3. <pb n="15"/></p>
+          <p>Dernier paragraphe du chapitre 3. <pb n="16"/></p>
+        </div>
+
+      </div><!-- fin chap3 -->
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <!--  CONCLUSION  (pages 17–18)                              -->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <div type="conclusion" xml:id="conclusion">
+        <head>Conclusion</head>
+        <p>Premier paragraphe de la conclusion. <pb n="17"/></p>
+        <p>Dernier paragraphe de la conclusion. <pb n="18"/></p>
+      </div>
+
+    </body>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  Parties annexes (après le corps du texte)                 -->
+    <!-- ---------------------------------------------------------- -->
+    <back>
+
+      <!-- Bibliographie (page 19) -->
+      <div type="bibliography" xml:id="bibliography">
+        <head>Bibliographie</head>
+        <pb n="19"/>
+
+        <listBibl>
+
+          <!-- Ouvrage monographique -->
+          <bibl xml:id="ref_001" type="book">
+            <author><persName><surname>Nom</surname>, <forename>Prénom</forename></persName></author>
+            <title level="m">Titre de l'ouvrage</title>
+            <pubPlace>Lieu de publication</pubPlace>
+            <publisher>Éditeur</publisher>
+            <date when="2020">2020</date>
+          </bibl>
+
+          <!-- Article de revue -->
+          <bibl xml:id="ref_002" type="article">
+            <author><persName><surname>Nom</surname>, <forename>Prénom</forename></persName></author>
+            <title level="a">Titre de l'article</title>
+            <title level="j">Titre de la revue</title>
+            <biblScope unit="volume">12</biblScope>
+            <biblScope unit="issue">3</biblScope>
+            <date when="2021">2021</date>
+            <biblScope unit="page">45–67</biblScope>
+            <idno type="DOI">10.0000/xxxxx</idno>
+          </bibl>
+
+          <!-- Chapitre dans un ouvrage collectif -->
+          <bibl xml:id="ref_003" type="bookSection">
+            <author><persName><surname>Nom</surname>, <forename>Prénom</forename></persName></author>
+            <title level="a">Titre du chapitre</title>
+            <editor><persName><surname>Dir.</surname>, <forename>Prénom</forename></persName></editor>
+            <title level="m">Titre de l'ouvrage collectif</title>
+            <pubPlace>Lieu</pubPlace>
+            <publisher>Éditeur</publisher>
+            <date when="2019">2019</date>
+            <biblScope unit="page">100–125</biblScope>
+          </bibl>
+
+          <!-- Ressource électronique -->
+          <bibl xml:id="ref_004" type="online">
+            <author><persName><surname>Nom</surname>, <forename>Prénom</forename></persName></author>
+            <title level="m">Titre de la ressource</title>
+            <ref target="https://exemple.fr">https://exemple.fr</ref>
+            <date type="access" when="2026-06-11">consulté le 11 juin 2026</date>
+          </bibl>
+
+        </listBibl>
+      </div>
+
+      <!-- Index des personnes (page 20) -->
+      <div type="index" subtype="persons" xml:id="index_persons">
+        <head>Index des noms de personnes</head>
+        <pb n="20"/>
+        <list type="index">
+          <item><term>Nom, Prénom</term> <ref target="#sec2_3">p. 9</ref></item>
+          <!-- Compléter avec les autres entrées d'index -->
+        </list>
+      </div>
+
+      <!-- Index des lieux (facultatif) -->
+      <div type="index" subtype="places" xml:id="index_places">
+        <head>Index des lieux</head>
+        <list type="index">
+          <item><term>Paris</term> <ref target="#sec2_3">p. 9</ref></item>
+        </list>
+      </div>
+
+      <!-- Notices biographiques / liste des contributeurs (facultatif) -->
+      <div type="notes" subtype="biographical" xml:id="bios">
+        <head>Notice biographique</head>
+        <p>Brève biographie de l'auteur ou des contributeurs.</p>
+      </div>
+
+    </back>
+
+  </text>
+
+  <!-- ============================================================ -->
+  <!--  DÉCLARATIONS GLOBALES : standOff / listPerson / listPlace   -->
+  <!--  (autorités nommées référencées dans le texte)              -->
+  <!-- ============================================================ -->
+  <standOff>
+
+    <listPerson>
+      <person xml:id="auteur_001">
+        <persName>
+          <forename>Jean</forename>
+          <surname>Dupont</surname>
+        </persName>
+        <birth when="1960"/>
+        <death when="2010"/>
+        <idno type="VIAF">https://viaf.org/viaf/XXXXXXXXX</idno>
+        <note>Notice biographique courte sur la personne.</note>
+      </person>
+    </listPerson>
+
+    <listOrg>
+      <org xml:id="org_001">
+        <orgName>Institut de recherche XYZ</orgName>
+        <placeName>Paris</placeName>
+        <idno type="ISNI">0000 0000 0000 0000</idno>
+      </org>
+    </listOrg>
+
+    <listPlace>
+      <place xml:id="place_paris">
+        <placeName xml:lang="fr">Paris</placeName>
+        <location>
+          <geo>48.8566 2.3522</geo>
+        </location>
+        <idno type="GeoNames">https://www.geonames.org/2988507</idno>
+      </place>
+    </listPlace>
+
+  </standOff>
+
+</TEI>
+
